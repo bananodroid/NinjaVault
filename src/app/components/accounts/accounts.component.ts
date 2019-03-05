@@ -31,7 +31,7 @@ export class AccountsComponent implements OnInit {
       return this.notificationService.sendError(`Wallet is locked.`);
     }
     if (!this.walletService.isConfigured()) return this.notificationService.sendError(`Wallet is not configured`);
-    if (this.walletService.wallet.accounts.length >= 20) return this.notificationService.sendWarning(`You can only track up to 20 accounts at a time.`);
+    if (this.walletService.wallet.accounts.length >= 40) return this.notificationService.sendWarning(`You can only track up to 40 accounts at a time.`);
     // Advanced view, manual account index?
     let accountIndex = null;
     if (this.viewAdvanced && this.newAccountIndex != null) {
